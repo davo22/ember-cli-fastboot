@@ -34,7 +34,7 @@ export default NoneLocation.extend({
         let isTransitioning = currentPath !== path;
 
         if (isTransitioning) {
-          let host = get(this, '_config.fastboot.host') || get(this, '_request.host');
+          let host = get(this, '_config.fastboot.redirectHost') || get(this, '_request.host');
           let redirectURL = `//${host}${path}`;
 
           response.statusCode = this.get('_redirectCode');
